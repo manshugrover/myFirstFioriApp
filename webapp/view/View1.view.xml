@@ -1,0 +1,10 @@
+<mvc:View xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" controllerName="oft.fiori.controller.View1"
+    xmlns:html="http://www.w3.org/1999/xhtml">
+    <Page title="View1">
+    <content>
+    <Button text="go to to second view" press="onNext"></Button>
+    </content>
+    </Page>
+    </mvc:View>
