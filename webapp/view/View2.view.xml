@@ -4,7 +4,7 @@
     xmlns:html="http://www.w3.org/1999/xhtml">
     <Page title="View2">
     <content>
-    <Button text="back" press="onBack"></Button>
+    <Button icon="sap-icon://nav-back" text="back" press="onBack"></Button>
     </content>
     </Page>
     </mvc:View>
