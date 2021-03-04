@@ -2,9 +2,10 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m" controllerName="oft.fiori.controller.View2"
     xmlns:html="http://www.w3.org/1999/xhtml">
-    <Page title="View2">
+    <Page title="View2" showNavButton="true" navButtonPress="onBack">
     <content>
-    <Button icon="sap-icon://nav-back" text="back" press="onBack"></Button>
+    <!-- <Button icon="sap-icon://nav-back" text="back" press="onBack"></Button> -->
+    
     </content>
     </Page>
     </mvc:View>
