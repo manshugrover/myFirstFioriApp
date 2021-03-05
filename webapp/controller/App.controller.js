@@ -1,12 +1,14 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
-    ""
+    "oft/fiori/controller/BaseController",
+    "oft/fiori/models/mockData/model"
 
 ], 
-function(Controller){
+function(Controller, model){
     "use strict";
 return Controller.extend("oft.fiori.Conroller.App",{
     onInit:function(){
+        var oModel= model.createFruitModel();
+        this.getView().setModel(oModel);
         // step-1 get the object of app control
         var oApp = this.getView().byId("myApp");
         // create the object of both views

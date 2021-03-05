@@ -7,8 +7,14 @@
       <Button icon="sap-icon://action" text="go to to second view" press="onNext"></Button>
     </headerContent>
     <content>
-      <SearchField></SearchField>
-      <List id="idList" Class="sapUiSmallMarginBeginEnd">
+      <SearchField search="onSearch" liveChange="onSearch"></SearchField>
+<List id="fruits" items="{/fruits}" itemPress="onPressItem">
+<!-- <DisplayListItem label="{name}" value="{benefit}"></DisplayListItem> -->
+<ObjectListItem  type="Navigation" intro="{benefit}" title="{name}" number="{price}" numberUnit="{unit}" icon="{photo}">
+</ObjectListItem>
+</List>
+
+      <List id="idList" Class="sapUiSmallMarginBeginEnd" visible="false">
         <items>
           <!-- purpose is to show sample data left right -->
           <DisplayListItem label="Apple" value="An apple eats a day, keeps doctor away">
