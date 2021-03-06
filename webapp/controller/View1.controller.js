@@ -6,7 +6,12 @@ sap.ui.define([
         return Controller.extend("oft.fiori.Conroller.View1", {
             onPressItem:function(oEvent){
                 // here we get the obj of the item selected by user
-                var oItem= oEvent.getParameter("listItem");
+                var oItem = oEvent.getParameter("listItem");
+                // what is the concept called which gives me the address of the element-context
+                var sPath= oItem.getBindingContextPath();
+                // get the object of view2 and bind this address to absoloute path of view2
+                var oApp= this.getAppObject
+                console.log(sPath);
             },
             onSearch: function (oEvent) {
                 var queryString = oEvent.getParameter("query");
