@@ -3,9 +3,20 @@
     xmlns="sap.m" controllerName="oft.fiori.controller.View2"
     xmlns:html="http://www.w3.org/1999/xhtml">
     <Page title="View2" showNavButton="true" navButtonPress="onBack">
-    <content>
-    <!-- <Button icon="sap-icon://nav-back" text="back" press="onBack"></Button> -->
-    
-    </content>
+        <content>
+            <!-- <Button icon="sap-icon://nav-back" text="back" press="onBack"></Button> -->
+            <!-- <Label text="{name}"></Label> -->
+            <ObjectHeader title="{name}" intro="{benefit}" number="{price}" numberUnit="{unit}" icon="{photo}"></ObjectHeader>
+            <IconTabBar>
+                <content>
+                <core:Fragment fragmentName="oft.fiori.fragments.moreInfo" type="XML"></core:Fragment>
+                </content>
+                <items>
+                    <IconTabFilter key="moreInfo" text="More Info." icon="sap-icon://information"></IconTabFilter>
+                    <IconTabFilter key="suppData" text="Suppliar Data" icon="sap-icon://suppliar"></IconTabFilter>
+                    <IconTabFilter key="selectCity" text="City Select" icon="sap-icon://home"></IconTabFilter>
+                </items>
+            </IconTabBar>
+        </content>
     </Page>
-    </mvc:View>
+</mvc:View>

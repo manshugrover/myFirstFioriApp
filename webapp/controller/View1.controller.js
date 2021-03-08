@@ -10,7 +10,10 @@ sap.ui.define([
                 // what is the concept called which gives me the address of the element-context
                 var sPath= oItem.getBindingContextPath();
                 // get the object of view2 and bind this address to absoloute path of view2
-                var oApp= this.getAppObject
+                var oApp= this.getAppObject();
+                var oView2=oApp.getDetailPages()[0];
+                oView2.bindElement(sPath);
+                this.onNext();
                 console.log(sPath);
             },
             onSearch: function (oEvent) {

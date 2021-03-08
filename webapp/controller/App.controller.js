@@ -23,8 +23,8 @@ return Controller.extend("oft.fiori.Conroller.App",{
             type:sap.ui.core.mvc.ViewType.XML
         });
         //add these views as part of app control
-        oApp.addPage(oView1);
-        oApp.addPage(oView2);
+        oApp.addMasterPage(oView1);
+        oApp.addDetailPage(oView2);
     }
 
 });
