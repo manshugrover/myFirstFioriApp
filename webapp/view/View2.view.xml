@@ -8,15 +8,34 @@
             <!-- <Label text="{name}"></Label> -->
             <ObjectHeader title="{name}" intro="{benefit}" number="{price}" numberUnit="{unit}" icon="{photo}"></ObjectHeader>
             <IconTabBar>
-                <content>
-                <core:Fragment fragmentName="oft.fiori.fragments.moreInfo" type="XML"></core:Fragment>
-                </content>
+
                 <items>
-                    <IconTabFilter key="moreInfo" text="More Info." icon="sap-icon://information"></IconTabFilter>
-                    <IconTabFilter key="suppData" text="Suppliar Data" icon="sap-icon://suppliar"></IconTabFilter>
-                    <IconTabFilter key="selectCity" text="City Select" icon="sap-icon://home"></IconTabFilter>
+                    <IconTabFilter key="moreInfo" text="More Info." icon="sap-icon://information" id="Zumba">
+                        <content>
+                            <core:Fragment fragmentName="oft.fiori.fragments.moreInfo" type="XML"></core:Fragment>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabFilter key="suppData" text="Suppliar Data" icon="sap-icon://suppliar">
+                        <content>
+                            <core:Fragment fragmentName="oft.fiori.fragments.suppliars" type="XML"></core:Fragment>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabFilter key="selectCity" text="City Select" icon="sap-icon://home">
+                        <content>
+                            <core:Fragment fragmentName="oft.fiori.fragments.citySelect" type="XML"></core:Fragment>
+                        </content>
+                    </IconTabFilter>
                 </items>
             </IconTabBar>
         </content>
+        <footer>
+     
+        <Toolbar>
+           <ToolbarSpacer />
+        <Button text="Approve" type="Accept" press="onAccept"></Button>
+        <Button text="Reject" type="Reject"></Button>
+        </Toolbar>
+        </footer>
+
     </Page>
 </mvc:View>

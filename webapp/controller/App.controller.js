@@ -22,9 +22,16 @@ return Controller.extend("oft.fiori.Conroller.App",{
             viewName:"oft.fiori.view.View2",
             type:sap.ui.core.mvc.ViewType.XML
         });
+        var oEmpty= new sap.ui.view({
+            id:"idEmpty",
+            viewName:"oft.fiori.view.Empty",
+            type:sap.ui.core.mvc.ViewType.XML
+        });
         //add these views as part of app control
         oApp.addMasterPage(oView1);
+        oApp.addDetailPage(oEmpty);
         oApp.addDetailPage(oView2);
+        oApp.setInitialDetail(oEmpty);
     }
 
 });

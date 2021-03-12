@@ -11,7 +11,7 @@ sap.ui.define([
                 var sPath= oItem.getBindingContextPath();
                 // get the object of view2 and bind this address to absoloute path of view2
                 var oApp= this.getAppObject();
-                var oView2=oApp.getDetailPages()[0];
+                var oView2=oApp.getDetailPages()[1];
                 oView2.bindElement(sPath);
                 this.onNext();
                 console.log(sPath);
