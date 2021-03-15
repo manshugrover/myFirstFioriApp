@@ -127,5 +127,24 @@
         "famousFor":"Apricot",
         "state":"Haryana"
     }
+],
+"countries":[
+    {
+        "name": "Ghana",
+        "code": "GH"
+    },
+    {
+        "name": "Gibraltar",
+        "code": "GI"
+    },
+    {
+        "name": "Greece",
+        "code": "GR"
+    },
+    {
+        "name": "Greenland",
+        "code": "GL"
+    }
+
 ]
 }

@@ -26,6 +26,26 @@ sap.ui.define([
                     onClose: this.popupClose.bind(this)
 
                 });
+            },
+            cityPopup:null,
+            countryPopup:null,
+            onF4Help:function(){
+                StatusMessage.show("This page is under construction");
+                // this.cityPopup=new sap.ui.xmlfragment("oft.fiori.fragments.Popup", this);
+                // this.cityPopup.open();
+            },
+            onFilter:function(){
+                StatusMessage.show("This page is under construction");
+            //     this.countryPopup=new sap.ui.xmlfragment("oft.fiori.fragments.Popup", this);
+            //    this.countryPopup.bindAggrigation("items",{
+            //        path:"/countries",
+            //        template: new sap.m.StandardListItem({
+            //            title:"{name}",
+            //            description:"{code}"
+            //        })
+            //    })
+            //     this.countryPopup.open();
+
             }
         });
     });
