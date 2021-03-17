@@ -8,6 +8,9 @@
             <!-- <Label text="{name}"></Label> -->
             <ObjectHeader title="{name}" intro="{benefit}" number="{price}" numberUnit="{unit}" icon="{photo}"></ObjectHeader>
             <IconTabBar>
+                <content>
+                    
+                </content>
 
                 <items>
                     <IconTabFilter key="moreInfo" text="More Info." icon="sap-icon://information" id="Zumba">
@@ -29,13 +32,11 @@
             </IconTabBar>
         </content>
         <footer>
-     
-        <Toolbar>
-           <ToolbarSpacer />
-        <Button text="Approve" type="Accept" press="onAccept"></Button>
-        <Button text="Reject" type="Reject"></Button>
-        </Toolbar>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button text="Approve" type="Accept" press="onAccept"></Button>
+                <Button text="Reject" type="Reject"></Button>
+            </Toolbar>
         </footer>
-
     </Page>
 </mvc:View>

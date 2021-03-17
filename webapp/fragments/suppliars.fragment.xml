@@ -1,35 +1,36 @@
-<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
-<Table id="idTable" items="{/suppliars}">
-<!-- <headerToolbar>
-<Toolbar>
-<ToobarSpacer />
-<Button icon="sap-icon://filter" tooltip="Country Filter"press="onFilter" ></Button>
-</Toolbar>
-</headerToolbar> -->
-<columns>
-<Column>
-<Text text="Name"></Text>
-</Column>
-<Column>
-<Text text="City"></Text>
-</Column>
-<Column>
-<Text text="Since When"></Text>
-</Column>
-<Column>
-<Text text="Operating Hours"></Text>
-</Column>
-</columns>
-<items>
-<ColumnListItem>
-<cells>
-<Text text="{name}"></Text>
-<Input value="{city}" showValueHelp="True" ValueHelpRequest="onF4Help"></Input>
-<Text text="{sincewhen}"></Text>
-<Text text="{operatingHours}"></Text>
-</cells>
+<core:FragmentDefinition xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Table id="idTable" items="{/suppliars}">
+        <headerToolbar>
+            <Toolbar>
+            <ToolbarSpacer></ToolbarSpacer>
+                <Button icon="sap-icon://filter" tooltip="Country Filter" press="onFilter"></Button>
+            </Toolbar>
+        </headerToolbar>
+        <columns>
+            <Column>
+                <Text text="Name"></Text>
+            </Column>
+            <Column>
+                <Text text="City"></Text>
+            </Column>
+            <Column>
+                <Text text="Since When"></Text>
+            </Column>
+            <Column>
+                <Text text="Operating Hours"></Text>
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem>
+                <cells>
+                    <Text text="{name}"></Text>
+                    <Input value="{city}" showValueHelp="true" valueHelpRequest="onF4Help"></Input>
+                    <Text text="{sincewhen}"></Text>
+                    <Text text="{operatingHours}"></Text>
+                </cells>
 
-</ColumnListItem>
-</items>
-</Table>
+            </ColumnListItem>
+        </items>
+    </Table>
 </core:FragmentDefinition>
