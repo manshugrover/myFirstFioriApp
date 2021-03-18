@@ -29,8 +29,18 @@ sap.ui.define([
             },
             cityPopup: null,
             countryPopup: null,
-            onF4Help: function () {
+            inputFieldIdOnwhichF4TableWasPressed: null,
+            onCityConfirm:function(oEvent){
+                var oItem= oEvent.getParameter("selectedItem");
+                sap.ui.getCore()
+                       .byId(this.inputFieldIdOnwhichF4TableWasPressed)
+                       .setValue(oItem.getTitle());
+
+            },
+            onF4Help: function (oEvent) {
+                this.inputFieldIdOnwhichF4TableWasPressed= oEvent.getSource().getId();
                 // StatusMessage.show("This page is under construction");
+                if(this.cityPopup== null){
                 this.cityPopup = new sap.ui.xmlfragment("oft.fiori.fragments.Popup", this);
                 this.getView().addDependent(this.cityPopup);
 
@@ -41,8 +51,12 @@ sap.ui.define([
                         description: "{famousFor}"
                     })
                 });
+                this.cityPopup.attachConfirm(this.onCityConfirm,this);
+            }
+                
                 this.cityPopup.open();
             },
+
             onFilter: function () {
                 // StatusMessage.show("This page is under construction");
                 this.countryPopup = new sap.ui.xmlfragment("oft.fiori.fragments.Popup", this);
