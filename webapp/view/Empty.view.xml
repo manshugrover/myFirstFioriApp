@@ -3,6 +3,7 @@
     xmlns="sap.m" controllerName="oft.fiori.controller.Empty" 
     xmlns:html="http://www.w3.org/1999/xhtml">
     <Page title="please select an item on master">
+    	
     <content></content>
     </Page>
     </mvc:View>
